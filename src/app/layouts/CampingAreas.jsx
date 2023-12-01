@@ -28,7 +28,7 @@ function CampingAreas() {
   return (
     <RadioTileGroup defaultValue="private" aria-label="Visibility Level">
       {campingArea.map((data) => (
-        <RadioTile icon={<Image src="/img/muspelheim.png" alt="idk" width={300} height={200}></Image>} label={data.area} value={data} key={data.area}>
+        <RadioTile icon={<Image src={data.img} alt="idk" width={300} height={200}></Image>} label={data.area} value={data} key={data.area}>
           {data.available}/{data.spots} spots left
         </RadioTile>
       ))}
