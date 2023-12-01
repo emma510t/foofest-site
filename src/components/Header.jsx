@@ -1,13 +1,26 @@
+"use client";
+import React from "react";
+import Image from "next/image";
+
 import { RadioTile, RadioTileGroup } from "rsuite";
 import { Icon } from "@rsuite/icons";
 import { VscLock, VscWorkspaceTrusted, VscRepo } from "react-icons/vsc";
 
-import React from "react";
-
 function Header() {
   return (
     <RadioTileGroup defaultValue="private" aria-label="Visibility Level">
-      <RadioTile icon={<Icon as={VscLock} />} label="Private" value="private">
+      <RadioTile
+        icon={
+          <Image
+            src="/img/muspelheim.png"
+            alt="idk"
+            width={300}
+            height={200}
+          ></Image>
+        }
+        label="Svartheim"
+        value="private"
+      >
         Project access must be granted explicitly to each user. If this project
         is part of a group, access will be granted to members of the group.
       </RadioTile>
