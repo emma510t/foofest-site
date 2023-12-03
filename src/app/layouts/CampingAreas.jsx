@@ -1,10 +1,7 @@
 "use client";
-
 import { React, useEffect, useState } from "react";
 import Image from "next/image";
 import { RadioTile, RadioTileGroup } from "rsuite";
-import { Icon } from "@rsuite/icons";
-import { VscLock, VscWorkspaceTrusted, VscRepo } from "react-icons/vsc";
 
 async function fetchFunc() {
   const res = await fetch("http://localhost:8080/available-spots");
@@ -26,21 +23,26 @@ function CampingAreas() {
   }, []);
 
   return (
-    <RadioTileGroup defaultValue="private" aria-label="Visibility Level">
+    <RadioTileGroup
+      className="flex"
+      defaultValue="private"
+      aria-label="Visibility Level"
+    >
       {campingArea.map((data) => (
         <RadioTile
+          className="flex flex-row-reverse border-2 rounded"
           icon={
             <Image
-              src="/img/muspelheim.png"
-              alt="idk"
+              src={data.img}
+              alt="festival campsite"
               width={300}
               height={200}
             ></Image>
           }
-          label={data.area}
-          value={data}
           key={data.area}
+          value={data}
         >
+          <p className="text-lg font-bold uppercase">{data.area}</p>
           {data.available}/{data.spots} spots left
         </RadioTile>
       ))}
