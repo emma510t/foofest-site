@@ -1,6 +1,7 @@
 "use client";
 import { React, useEffect, useState } from "react";
 import Image from "next/image";
+import RadioTile from "@/components/RadioTile";
 
 async function fetchFunc() {
   const res = await fetch("http://localhost:8080/available-spots");
@@ -22,19 +23,9 @@ function CampingAreas() {
   }, []);
 
   return (
-    <legend
-      className="flex"
-      defaultValue="private"
-      aria-label="Visibility Level"
-    >
+    <legend className="flex" defaultValue="private" aria-label="Visibility Level">
       {campingArea.map((data) => (
-        <input
-          type="radio"
-          className="flex flex-row-reverse border-2 rounded"
-          value={data}
-          name="campingarea"
-          key={data.area}
-        ></input>
+        <RadioTile data="data"></RadioTile>
       ))}
     </legend>
   );
