@@ -1,4 +1,3 @@
-import "rsuite/dist/rsuite.min.css";
 import Header from "@/components/Header";
 import Image from "next/image";
 

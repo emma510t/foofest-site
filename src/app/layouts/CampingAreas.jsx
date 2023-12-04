@@ -1,7 +1,6 @@
 "use client";
 import { React, useEffect, useState } from "react";
 import Image from "next/image";
-import { RadioTile, RadioTileGroup } from "rsuite";
 
 async function fetchFunc() {
   const res = await fetch("http://localhost:8080/available-spots");
@@ -23,30 +22,21 @@ function CampingAreas() {
   }, []);
 
   return (
-    <RadioTileGroup
+    <legend
       className="flex"
       defaultValue="private"
       aria-label="Visibility Level"
     >
       {campingArea.map((data) => (
-        <RadioTile
+        <input
+          type="radio"
           className="flex flex-row-reverse border-2 rounded"
-          icon={
-            <Image
-              src={data.img}
-              alt="festival campsite"
-              width={300}
-              height={200}
-            ></Image>
-          }
-          key={data.area}
           value={data}
-        >
-          <p className="text-lg font-bold uppercase">{data.area}</p>
-          {data.available}/{data.spots} spots left
-        </RadioTile>
+          name="campingarea"
+          key={data.area}
+        ></input>
       ))}
-    </RadioTileGroup>
+    </legend>
   );
 }
 
