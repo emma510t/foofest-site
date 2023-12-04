@@ -44,25 +44,3 @@ h6,
 div {
   color: var(--text-white);
 }
-
-.rs-radio-tile-body {
-  display: flex;
-  gap: 10px;
-  margin-left: 20px;
-  width: 100%;
-}
-
-.rs-radio-tile-checked * {
-  color: var(--yellow);
-}
-
-.rs-radio-tile-checked {
-  border: 2px solid var(--yellow);
-}
-
-input[type="radio"] {
-  accent-color: var(--yellow);
-}
-.rs-radio-tile-mark {
-  display: none; /* Hide the checkmark icon */
-}
