@@ -1,3 +1,4 @@
+import "@/app/globals.css";
 import Footer from "@/components/Footer";
 import CampingAreas from "../layouts/CampingAreas";
 

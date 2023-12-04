@@ -13,9 +13,6 @@
   border: 2px solid var(--yellow);
 }
 
-/* input[type="radio"] {
+.accent {
   accent-color: var(--yellow);
-} */
-.rs-radio-tile-mark {
-  display: none; /* Hide the checkmark icon */
 }

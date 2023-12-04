@@ -4,8 +4,8 @@ function RadioTile(data) {
   return (
     <input
       type="radio"
-      className="flex flex-row-reverse border-2 rounded"
-      value={data}
+      className={styles.accent + "flex flex-row-reverse border-2 rounded"}
+      value={data.area}
       name="campingarea"
       key={data.area}
     ></input>
